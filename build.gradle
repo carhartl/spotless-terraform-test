@@ -1,0 +1,10 @@
+plugins {
+  id "com.diffplug.spotless" version "5.15.0"
+}
+
+spotless {
+  terraform {
+    target 'terraform/**/*.tf'
+    fmt()
+  }
+}

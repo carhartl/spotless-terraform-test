@@ -1,0 +1,20 @@
+pluginManagement {
+  repositories {
+    maven {
+      url 'https://jitpack.io'
+      content {
+        includeGroup 'com.github.carhartl.spotless'
+      }
+    }
+    gradlePluginPortal()
+  }
+  resolutionStrategy {
+    eachPlugin {
+      if (requested.id.id == 'com.diffplug.spotless') {
+        useModule('com.github.carhartl.spotless:spotless-plugin-gradle:45b5c5a8f4a56156ac32aafcc1830a020d17f6a9')
+      }
+    }
+  }
+}
+
+rootProject.name = 'spotless-terraform-test'
