@@ -3,8 +3,8 @@ plugins {
 }
 
 spotless {
-  terraform {
+  format 'terraform', {
     target 'terraform/**/*.tf'
-    fmt()
+    nativeCmd 'terraform', '/opt/homebrew/bin/terraform', ['fmt', '-']
   }
 }
